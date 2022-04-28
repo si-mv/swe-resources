@@ -258,7 +258,7 @@ router.post('/', (req,res) => {
         return res.status(400).json({ msg: 'Please include a name' })
     }
     members.push(newMember)
-    res.json({ ...newMember, msg: 'New user added successfully.'})
+    res.status(201).json({ ...newMember, msg: 'New user added successfully.'})
 })
 ```
 
