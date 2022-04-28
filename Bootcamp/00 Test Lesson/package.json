@@ -1,0 +1,15 @@
+{
+  "name": "00-test-lesson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "test:report": "jest --coverage=true"
+  },
+  "author": "Simon Haines",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}

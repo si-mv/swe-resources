@@ -1,0 +1,4 @@
+@startuml
+scale 3
+Alice -> Boob : test
+@enduml
