@@ -1,5 +1,7 @@
 # Teaching Notes
 
+
+
 ## Set up backend
 
 Install dependencies:
@@ -9,7 +11,7 @@ cd server
 npm install express // express is the backend framework
 ```
 
-Let's create index.js and add some code there to kick start our express app!
+Let's create `main.js` and add some code there to kick start our express app!
 ```js
 const express = require('express')
 
@@ -22,7 +24,7 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
 
 Now if we run
 ```
-node index.js
+node main.js
 ```
 we will have a server running on port 5000.
 
@@ -48,7 +50,7 @@ npm install nodemon --save-dev
 ```
 Now if we start our server with
 ```
-nodemon index.js
+nodemon main.js
 ```
 we don't need to restart all the time.
 
@@ -81,7 +83,7 @@ If we want to send back html instead of a string, we can make a folder called `p
   </body>
 </html>
 ```
-and go back to our main `index.js` file and make some changes:
+and go back to our main `main.js` file and make some changes:
 ```js
 // const express = require('express')
 const path = require('path') // So we don't need to manually build addresses for stuff!
@@ -139,13 +141,13 @@ app.get('/api/members', (req,res) => {
 
 ## Request from the frontend
 
-Let's make a dir for frontend and `npm init`. We should install `axios`, make sure that `"type: module"` is in the `package.json` add an `index.js` file to it.
+Let's make a dir for frontend and `npm init`. We should install `axios`, make sure that `"type: module"` is in the `package.json` add an `app.js` file to it.
 ```js
-import fetch from 'node-fetch'
+import axios from 'axios'
 
 const fetchMembers = async () => {
-    const response = await fetch('http://localhost:5000/api/members')
-    const data = await response.json()
+    const response = await axios('http://localhost:5000/api/members')
+    const data = response.data
     console.log(data)
 }
 
@@ -237,7 +239,7 @@ In the frontend, we can make a post request with Axios:
 const addMember = async () => {
     try {
         const response = await axios.post('http://localhost:5000/api/members', {
-            named: 'Eta James'
+            name: 'Eta James'
         })
         console.log(response.data)
     } catch (error) {
@@ -295,7 +297,39 @@ router.put('/:id', (req,res) => {
 
 ## Delete a member
 
+On the frontend:
+#### **`app.js`**
+```js
+const deleteMember = async (id) => {
+    try {
+        const response = await axios.delete(`http://localhost:5000/api/members/${id}`)
+        console.log(response.data)
+    } catch (error) {
+        console.log(error.response.data)
+    }
+}
+```
+And on the backend:
+```js
+router.delete('/:id', (req,res) => {
+    const member = members.find(m => m.id == req.params.id)
+    if (member) {
+        members = members.filter(m => m.id != req.params.id)
+        res.json({ msg: 'User deleted successfully' })
+    } else {
+        res.status(404).json({ msg: `Use with id ${req.params.id} cannot be found.` })
+    }
+})
+```
 
+## Add a cache
+
+In `main.js` we can use an npm package to implement a simple cache:
+```js
+const apicache = require('apicache')
+let cache = apicache.middleware
+app.use(cache('5 minutes'))
+```
 
 ## Add a middleware
 
@@ -308,7 +342,7 @@ const logRequest = (req, res, next) => {
 
 module.exports logRequest
 ```
-and we will use it in `index.js`
+and we will use it in `main.js`
 ```js
 const logRequest = require('./middleware/logRequest')
 app.use(logRequest)

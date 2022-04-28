@@ -22,12 +22,12 @@ const fetchMember = async (id) => {
     }
 }
 
-// fetchMember(2)
+fetchMember(2)
 
 const addMember = async () => {
     try {
         const response = await axios.post('http://localhost:5000/api/members', {
-            named: 'Eta James'
+            name: 'Eta James'
         })
         console.log(response.data)
     } catch (error) {
@@ -60,4 +60,4 @@ const deleteMember = async (id) => {
 }
 
 // deleteMember(1)
-fetchMembers()
+// fetchMembers()
