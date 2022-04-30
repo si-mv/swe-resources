@@ -64,6 +64,23 @@ Last but of setup, let's add to our scripts
 ```
 The `"start"` command would probably be used in prod, but for dev we well do `npm run dev`.
 
+## Add a middleware
+
+Let's add a function `logRequest` in a `middleware` directory to log on the server whenever a request is made:
+```js
+const logRequest = (req, res, next) => {
+    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}:${Date.now()}`)
+    next()
+}
+
+module.exports logRequest
+```
+and we will use it in `main.js`
+```js
+const logRequest = require('./middleware/logRequest')
+app.use(logRequest)
+```
+
 ## Serving HTML files
 
 If we want to send back html instead of a string, we can make a folder called `public` and grab it from there. Let's put an `index.html` file in public:
@@ -85,20 +102,13 @@ If we want to send back html instead of a string, we can make a folder called `p
 ```
 and go back to our main `main.js` file and make some changes:
 ```js
-// const express = require('express')
 const path = require('path') // So we don't need to manually build addresses for stuff!
-// // Without using path, our app would break when we move it to another machine because the absolute location would be different
-
-// const app = express()
+// Without using path, our app would break when we move it to another machine because the absolute location would be different
 
 // // This sends back the file
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
-
-// const PORT = process.env.PORT || 5000
-
-// app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
 ```
 
 ## Serving from static
@@ -329,21 +339,4 @@ In `main.js` we can use an npm package to implement a simple cache:
 const apicache = require('apicache')
 let cache = apicache.middleware
 app.use(cache('5 minutes'))
-```
-
-## Add a middleware
-
-Let's add a function `logRequest` to log on the server whenever a request is made:
-```js
-const logRequest = (req, res, next) => {
-    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}:${Date.now()}`)
-    next()
-}
-
-module.exports logRequest
-```
-and we will use it in `main.js`
-```js
-const logRequest = require('./middleware/logRequest')
-app.use(logRequest)
 ```
