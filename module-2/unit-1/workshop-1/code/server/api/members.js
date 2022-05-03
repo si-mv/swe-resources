@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-let members = require('../models/Members')
+let members = require('../data/Members')
 const nanoid = require('nanoid')
 
 router.get('/', (req, res) => {
