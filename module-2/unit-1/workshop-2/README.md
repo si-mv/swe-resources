@@ -21,6 +21,12 @@ As a user:
 - [ ] I can remove `readers` from my memos.
 - [ ] I can delete my account, and all data associated with my account will be deleted too.
 
+| As a... | I can... | so that... |
+| :---: | --- | --- |
+| user | create an account with a `username` and `password` | I can sign in securely |
+| user | be assigned an `uid` by the server when I create an account | I can be identified uniquely |
+| user | have my password salted and hashed on the server | I won't get hacked
+
 ### Hints
 
  - You could use (nanoid)[https://www.npmjs.com/package/nanoid] for creating `uid`s on the server.
