@@ -1,4 +1,4 @@
-import axios from 'axios'
+const axios = require('axios')
 
 const fetchMembers = async () => {
     const response = await axios('http://localhost:5000/api/members')
@@ -6,7 +6,7 @@ const fetchMembers = async () => {
     console.log(data)
 }
 
-// fetchMembers()
+fetchMembers()
 
 const fetchMember = async (id) => {
     try {
@@ -22,7 +22,7 @@ const fetchMember = async (id) => {
     }
 }
 
-fetchMember(2)
+// fetchMember(2)
 
 const addMember = async () => {
     try {
