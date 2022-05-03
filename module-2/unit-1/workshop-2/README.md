@@ -9,17 +9,17 @@ Create two npm projects, one in a directory called `client` and another in `serv
 ### User story
 
 As a user:
--[ ] I can create an account with a `username` and `password`.
--[ ] when I create an account, the server assigns me a `uid`.
--[ ] when I create an account, the server salts and hashes my `password`.
--[ ] I can change my `username`.
--[ ] I can change my `password`.
--[ ] I can create a `memo` object which contains a `string` representing my memo's `content`.
--[ ] I can delete my own memos, but no other user can.
--[ ] I can read my own memos.
--[ ] I can add `readers` to my memos who have read-only access. Only I and my `readers` can read my memos, nobody else.
--[ ] I can remove `readers` from my memos.
--[ ] I can delete my account, and all data associated with my account will be deleted too.
+- [ ] I can create an account with a `username` and `password`.
+- [ ] when I create an account, the server assigns me a `uid`.
+- [ ] when I create an account, the server salts and hashes my `password`.
+- [ ] I can change my `username`.
+- [ ] I can change my `password`.
+- [ ] I can create a `memo` object which contains a `string` representing my memo's `content`.
+- [ ] I can delete my own memos, but no other user can.
+- [ ] I can read my own memos.
+- [ ] I can add `readers` to my memos who have read-only access. Only I and my `readers` can read my memos, nobody else.
+- [ ] I can remove `readers` from my memos.
+- [ ] I can delete my account, and all data associated with my account will be deleted too.
 
 ### Hints
 
