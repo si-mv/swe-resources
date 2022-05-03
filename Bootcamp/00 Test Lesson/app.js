@@ -1,3 +1,5 @@
-A = [...Array(10)].map((x,i) => i)
+function range(n) {
+    return [...Array(n).keys()]
+}
 
-console.log(A)
+console.log(range(10))
