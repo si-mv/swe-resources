@@ -58,8 +58,8 @@ Last but of setup, let's add to our scripts
 ```js
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "node main",
+    "dev": "nodemon main"
   },
 ```
 The `"start"` command would probably be used in prod, but for dev we well do `npm run dev`.
