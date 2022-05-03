@@ -42,7 +42,7 @@ app.get('/', (req,res) => {
 
 // app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
 ```
-In order to see the change, we need to restart the server.
+In order to see the change, we need to restart the server and visit `http://localhost:5000`
 
 As we don't want to restart the server all the time, let's use nodemon:
 ```
@@ -58,8 +58,8 @@ Last but of setup, let's add to our scripts
 ```js
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "node main",
+    "dev": "nodemon main"
   },
 ```
 The `"start"` command would probably be used in prod, but for dev we well do `npm run dev`.
