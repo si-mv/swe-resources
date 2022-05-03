@@ -18,11 +18,11 @@ Objectives:
     where `bXIucG9wbzpMbGFtYUZhcm1hOTU=` is the Base 64 encoding of `username:password`.
 
     If you want to manually encode to Base 64, open the dev tools console in your browser and type
-    ```
+    ```js
     btoa('hello world')
     ```
     and to decode back to a string you can
-    ```
+    ```js
     atob('aGVsbG8gd29ybGQ=')
     ```
 
