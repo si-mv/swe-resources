@@ -26,7 +26,7 @@ For users...
 ### Hints
 
  - You could use (nanoid)[https://www.npmjs.com/package/nanoid] for creating `uid`s on the server.
- - When the user is created, the password should be salted and hashed and stored in the `users` array. You should use [bcrypt](https://www.npmjs.com/package/bcrypt) for hashing (scroll down to the section on async - this is the best way).
+ - When the user is created, the password should be salted and hashed and stored in the `users` array. You should use [bcrypt](https://www.npmjs.com/package/bcrypt) for hashing (scroll down to the section on async - this is the best way). [I'm an inline-style link](https://www.google.com)
 
 ### Extension 1
 
