@@ -22,10 +22,10 @@ As a user:
 - [ ] I can delete my account, and all data associated with my account will be deleted too.
 
 | As a... | I can... | so that... | Status |
-| :---: | --- | --- |
+| :---: | --- | --- | :---: |
 | user | create an account with a `username` and `password` | I can sign in securely | :white_check_mark |
 | user | be assigned an `uid` by the server when I create an account | I can be identified uniquely | :white_large_square |
-| user | have my password salted and hashed on the server | I won't get hacked| :white_large_square |
+| user | have my password salted and hashed on the server | I won't get hacked | :white_large_square |
 
 ### Hints
 
