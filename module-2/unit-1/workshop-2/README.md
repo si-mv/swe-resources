@@ -7,9 +7,7 @@ Objectives:
 
 ## Notes
 
--   **Authentication** is the process of verifying that a user is who they say they are.
-
--   **Authorization** is the process of verifying that the authenticated user has *permission* to carry out an action.
+-   **Authentication** is the process of verifying that a user is who they say they are. **Authorization** is the process of verifying that the authenticated user has *permission* to carry out an action.
 
 -   Under Basic Authentication, the username and password are sent as a HTTP header in the following format:
     ```
@@ -37,6 +35,8 @@ Create two npm projects, one in a directory called `client` and another in `serv
 Make sure you use the correct request types (GET, POST, PUT, DELETE) and response codes when building your app.
 
 ### User story
+
+**Copy this table into the readme of your group's root folder.**
 
 Replace `:white_large_square:` with `:white_check_mark:` when you have completed each row.
 
