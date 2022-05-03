@@ -42,7 +42,7 @@ app.get('/', (req,res) => {
 
 // app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
 ```
-In order to see the change, we need to restart the server.
+In order to see the change, we need to restart the server and visit `http://localhost:5000`
 
 As we don't want to restart the server all the time, let's use nodemon:
 ```
