@@ -16,7 +16,7 @@ router.get('/:id', (req, res) => {
     }
 })
 
-router.post('/', (req,res) => {
+router.post('/', (req, res) => {
     const newMember = {
         id: nanoid.nanoid(),
         name: req.body.name
