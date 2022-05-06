@@ -1,16 +1,42 @@
-const axios = require('axios')
+import axios from 'axios'
 
 class User {
     constructor (username, password) {
         this.username = username
         this.password = password
+        this.accessToken = null
     }
+
     get token () {
         return Buffer.from(`${this.username}:${this.password}`, 'utf8').toString('base64')
+    }
+
+    get isLoggedIn () {
+        return !!this.accessToken
+    }
+
+    logout () {
+        this.accessToken = null
+    }
+
+    async login () {
+        try {
+            const response = await axios.post('http://localhost:5000/api/login', {}, {
+                headers: {
+                    'authorization': `Basic ${this.token}`
+                }
+            })
+            this.accessToken = response.data && response.data.accessToken
+            return Promise.resolve(response)
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
 
 const user1 = new User('nimonian', 'Potato23')
+// To get the token from the terminal, `node` and then
+// Buffer.from('nimonian:Potato23', 'utf8').toString('base64')
 
 const fetchSecret = async (user) => {
     try {
@@ -25,4 +51,20 @@ const fetchSecret = async (user) => {
     }
 }
 
-fetchSecret(user1)
+// fetchSecret(user1)
+
+async function fetchUserFiles (user) {
+    await user.login()
+    try {
+        const response = await axios.get(`http://localhost:5000/api/v2/files/${user.username}`, {
+            headers: {
+                'Authorization': `Bearer ${user.accessToken}`
+            }
+        })
+        console.log(response.data)
+    } catch (error) {
+        console.log(error.response)
+    }
+}
+
+fetchUserFiles(user1)

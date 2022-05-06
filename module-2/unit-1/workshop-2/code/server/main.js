@@ -1,8 +1,25 @@
+require('dotenv').config()
 const express = require('express')
 const auth = require('basic-auth')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 const app = express()
+app.use(express.json())
+
+// bcrypt usage:
+// async function logHash (plaintext) {
+//     const h = await bcrypt.hash(plaintext, 10)
+//     console.log(h)
+// }
+// logHash('Potato23')
+// 
+// or in node interactive terminal:
+// require('bcrypt').hashSync('Potato23', 10)
+
+// Generate secret key in node interactive terminal:
+// require('crypto').randomBytes(64).toString('hex')
+
 
 const users = [
     {
@@ -30,23 +47,59 @@ const files = [
     }
 ]
 
-app.get('/api/files/:username', async (req,res) => {
+async function authenticate (req, res, next) {
     const user = auth(req)
     const userEntry = users.find(u => u.username === user.name)
     if (!userEntry) {
         return res.status(404).send({ msg: 'User does not exist.' })
     }
     
-    const authorized = await bcrypt.compare(user.pass, userEntry.hashedPass)
-    if (!authorized) {
+    const authenticated = await bcrypt.compare(user.pass, userEntry.hashedPass)
+    if (!authenticated) {
         return res.status(401).send({ msg: 'Password is incorrect.' })
     }
-    
+
+    next()
+
+}
+
+async function authorize (req, res, next) {
+    const authHeader = req.headers.authorization
+    const token = authHeader && authHeader.split(' ')[1]
+    if (!token) return res.status(401).send({ msg: 'No credentials found.' })
+
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+        if (err) return res.status(403).send({ msg: 'Invalid access token.' })
+        req.username = user.name
+        next()
+    })
+}
+
+app.get('/api/files/:username', authenticate, async (req,res) => {
+    const user = auth(req)
     const userFiles = files.filter(f => f.owners.includes(user.name))
     return res.status(200).send({
         msg: `${userFiles.length} files returned`,
         files: userFiles
     })
+})
+
+app.get('/api/v2/files/:username', authorize, (req, res) => {
+    if (req.username) {
+        const userFiles = files.filter(f => f.owners.includes(req.username))
+        return res.status(200).send({
+            msg: `${userFiles.length} files returned`,
+            files: userFiles
+        })
+    } else {
+        res.status(401).send({ msg: 'No username provided.' })
+    }
+})
+
+app.post('/api/login', authenticate, (req, res) => {
+    const user = auth(req)
+    const accessToken = jwt.sign({ name: user.name, foo: 'bar' }, process.env.ACCESS_TOKEN_SECRET)
+    res.send({ accessToken })
 })
 
 const PORT = process.env.PORT || 5000

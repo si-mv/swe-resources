@@ -1,0 +1,17 @@
+GET http://localhost:5000/api/files/nimonian
+Authorization: Basic bmltb25pYW46UG90YXRvMjM=
+
+###
+
+POST http://localhost:5000/api/login
+Authorization: Basic bmltb25pYW46UG90YXRvMjM=
+Content-Type: application/json
+
+{
+    "username": "nimonian"
+}
+
+###
+
+GET http://localhost:5000/api/v2/files/nimonian
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibmltb25pYW4iLCJmb28iOiJiYXIiLCJpYXQiOjE2NTE3MDY0MDV9.gu73dd1cPB_fbfI2dlyaMpvpYkbrIAqinXDVa6S2MK0
