@@ -1,0 +1,25 @@
+### You can get data from the github api
+### /zen is just a silly endpoint for fun
+GET https://api.github.com/zen
+
+### By passing paramters, you can access a user's public information
+GET https://api.github.com/users/nimonian
+
+### Neither of these endpoints are protected
+### There are many ways to get protected data
+
+### One way would be for the user to manually make an access token
+### In github: settings > developer settings > personal access tokens
+### Give it a name, and expiry, and some scopes
+### We need to encode 'username:token' to base64 and use the Basic header
+
+GET https://api.github.com/users/nimonian
+Authorization: Basic bmltb25pYW46Z2hwX2xnRTJSWE9GdHJiNXAxcDkyYWVrdVpaOGpVVXJzRjNHeGtLYg==
+
+### Web application flow
+
+### First, we request a users's GitHub identity
+GET https://github.com/login/oauth/authorize?client_id=153bdd05c9d2e832cac9?scope=repo,gist
+
+### Then we exchange the returned code for an access_token
+https://github.com/login/oauth/access_token?client_id=153bdd05c9d2e832cac9&client_secret=99f35591f3b396b2f265f0d3f5221152bb0676c5&code=befaca6ad5425893cf4d
