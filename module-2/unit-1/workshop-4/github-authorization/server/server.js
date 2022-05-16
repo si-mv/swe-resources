@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 app.get('/auth/github/callback', async (req, res) => {
     const code = req.query.code
     try {   
+            // 8. The server combines the code with the client_id and client_secret to request and auth_token from Github
             let url = 'https://github.com/login/oauth/access_token'
             url += `?client_id=${process.env.CLIENT_ID}`
             url += `&client_secret=${process.env.CLIENT_SECRET}`
@@ -23,6 +24,7 @@ app.get('/auth/github/callback', async (req, res) => {
                 'Accept': 'application/json'
             }
         })
+        // 9. Our server gets the auth_token and sends it back to our app frontend
         res.send( tokenResponse.data )
     } catch (err) {
         res.status(500).send(err)

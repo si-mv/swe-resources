@@ -1,0 +1,2 @@
+GET https://www.googleapis.com/oauth2/v1/userinfo
+Authorization: Bearer ya29.A0ARrdaM9u4eDYZeTkNAYHcSnJQpUbuqYdO5mWWC-8aGN5bdCD6TUbNGTvRGa6B44Q66G2M-jik86eD591zFWLZWKwVpfERcqgtyQFV6zeiypt2eDQxo96ltO4jxZVqQuQEqn2F-bo3HrFTf0mTTTPliKWdlHS

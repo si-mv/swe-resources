@@ -1,0 +1,3 @@
+GET  https://api.github.com/user/repos?visibility=private
+Authorization: token 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
+Accept: application/json
