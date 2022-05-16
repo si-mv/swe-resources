@@ -11,7 +11,7 @@ app.use(express.json())
 
 app.post('/api/oauth2/auth', (req,res) => {
     // TODO:
-    // Make sure the client_id exists
+    // Make sure the client_id is valid
     // Authenticate the user
     // Generate a random code and add it to the client's `code` property
     // Redirect the user (user res.redirect(url)) to the callback_url with the code as a query param
