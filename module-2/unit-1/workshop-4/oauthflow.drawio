@@ -1,192 +1,192 @@
 <mxfile host="65bd71144e">
     <diagram id="bkFPDfp2Za1EJ1h1c-Yy" name="Page-1">
-        <mxGraphModel dx="802" dy="263" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+        <mxGraphModel dx="562" dy="338" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" vertex="1">
+                <mxCell id="2" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="60" y="40" width="40" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="Client App" style="swimlane;fontStyle=1;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" vertex="1">
+                <mxCell id="3" value="Client App" style="swimlane;fontStyle=1;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="160" y="30" width="280" height="130" as="geometry">
                         <mxRectangle x="160" y="30" width="130" height="23" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="9" value="Frontend&#10;(Browser)" style="rounded=1;whiteSpace=wrap;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="3" vertex="1">
+                <mxCell id="9" value="Frontend&#10;(Browser)" style="rounded=1;whiteSpace=wrap;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="3" vertex="1">
                     <mxGeometry x="10" y="50" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="62" value="Backend&#10;(Server)" style="ellipse;shape=cloud;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="3" vertex="1">
+                <mxCell id="62" value="Backend&#10;(Server)" style="ellipse;shape=cloud;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="3" vertex="1">
                     <mxGeometry x="140" y="30" width="130" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="Github (OAuth Provider)" style="swimlane;fontStyle=1;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" vertex="1">
+                <mxCell id="16" value="Github (OAuth Provider)" style="swimlane;fontStyle=1;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="480" y="30" width="280" height="130" as="geometry">
                         <mxRectangle x="190" y="210" width="130" height="23" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="17" value="Login Page" style="rounded=1;whiteSpace=wrap;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="16" vertex="1">
+                <mxCell id="17" value="Login Page" style="rounded=1;whiteSpace=wrap;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="16" vertex="1">
                     <mxGeometry x="20" y="50" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="63" value="OAuth&#10;Server" style="ellipse;shape=cloud;whiteSpace=wrap;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="16" vertex="1">
+                <mxCell id="63" value="OAuth&#10;Server" style="ellipse;shape=cloud;whiteSpace=wrap;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="16" vertex="1">
                     <mxGeometry x="140" y="30" width="130" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="" style="endArrow=none;rounded=1;sketch=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" target="9" edge="1">
+                <mxCell id="20" value="" style="endArrow=none;rounded=1;sketch=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" target="9" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="230" y="520" as="sourcePoint"/>
                         <mxPoint x="450" y="220" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="21" value="" style="endArrow=none;rounded=1;sketch=1;entryX=0.55;entryY=0.95;entryDx=0;entryDy=0;fontFamily=Courier New;entryPerimeter=0;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" target="62" edge="1">
+                <mxCell id="21" value="" style="endArrow=none;rounded=1;sketch=1;entryX=0.55;entryY=0.95;entryDx=0;entryDy=0;fontFamily=Courier New;entryPerimeter=0;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" target="62" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="370" y="520" as="sourcePoint"/>
                         <mxPoint x="370" y="140" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="22" value="" style="endArrow=none;rounded=1;sketch=1;fontFamily=Courier New;entryX=0.55;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" target="63" edge="1">
+                <mxCell id="22" value="" style="endArrow=none;rounded=1;sketch=1;fontFamily=Courier New;entryX=0.55;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" target="63" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="690" y="520" as="sourcePoint"/>
                         <mxPoint x="690" y="180" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="23" value="" style="endArrow=none;rounded=1;sketch=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" target="17" edge="1">
+                <mxCell id="23" value="" style="endArrow=none;rounded=1;sketch=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" target="17" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="560" y="520" as="sourcePoint"/>
                         <mxPoint x="560" y="180" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="24" value="" style="endArrow=none;rounded=1;sketch=1;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" target="2" edge="1">
+                <mxCell id="24" value="" style="endArrow=none;rounded=1;sketch=1;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" target="2" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="80" y="520" as="sourcePoint"/>
                         <mxPoint x="80" y="150" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="29" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="29" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="80" y="200" as="sourcePoint"/>
                         <mxPoint x="230" y="200" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="30" value="Clicks Login&#10;with Github" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="29" connectable="0" vertex="1">
+                <mxCell id="30" value="Clicks Login&#10;with Github" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="29" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="32" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="230" y="210" as="sourcePoint"/>
                         <mxPoint x="560" y="210" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="33" value="href with client_id&#10;in params" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="32" connectable="0" vertex="1">
+                <mxCell id="33" value="href with client_id&#10;in params" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="32" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="34" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="560" y="250" as="sourcePoint"/>
                         <mxPoint x="230" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="35" value="Requests&#10;username:password" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="34" connectable="0" vertex="1">
+                <mxCell id="35" value="Requests&#10;username:password" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="34" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="38" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="230" y="290" as="sourcePoint"/>
                         <mxPoint x="560" y="290" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="39" value="Inputs&#10;username:password" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="38" connectable="0" vertex="1">
+                <mxCell id="39" value="Inputs&#10;username:password" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="38" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="40" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="560" y="330" as="sourcePoint"/>
                         <mxPoint x="230" y="330" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="41" value="Redirects to app callback&#10;page with code in params" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="40" connectable="0" vertex="1">
+                <mxCell id="41" value="Redirects to app callback&#10;page with code in params" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="40" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="42" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="42" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="560" y="300" as="sourcePoint"/>
                         <mxPoint x="690" y="300" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="43" value="Check id" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="42" connectable="0" vertex="1">
+                <mxCell id="43" value="Check id" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="42" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="44" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="680" y="320" as="sourcePoint"/>
                         <mxPoint x="560" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="45" value="Authenticate" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="44" connectable="0" vertex="1">
+                <mxCell id="45" value="Authenticate" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="44" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="5" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="46" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="46" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="230" y="370" as="sourcePoint"/>
                         <mxPoint x="370" y="370" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="47" value="Post code to&#10;/github/auth" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="46" connectable="0" vertex="1">
+                <mxCell id="47" value="Post code to&#10;/github/auth" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="46" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="48" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="370" y="390" as="sourcePoint"/>
                         <mxPoint x="690" y="390" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="49" value="Post code, client_id and&#10;client_secret to&#10;token endpiont" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="48" connectable="0" vertex="1">
+                <mxCell id="49" value="Post code, client_id and&#10;client_secret to&#10;token endpiont" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="48" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="50" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="50" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="690" y="439" as="sourcePoint"/>
                         <mxPoint x="370" y="439" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="51" value="Respond with&#10;access_token" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="50" connectable="0" vertex="1">
+                <mxCell id="51" value="Respond with&#10;access_token" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="50" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="54" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="54" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="370" y="448" as="sourcePoint"/>
                         <mxPoint x="230" y="448" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="55" value="Respond with&#10;access_token" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="54" connectable="0" vertex="1">
+                <mxCell id="55" value="Respond with&#10;access_token" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="54" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="56" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="56" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="230" y="480" as="sourcePoint"/>
                         <mxPoint x="690" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="57" value="Request secrets&#10;with auth_token" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="56" connectable="0" vertex="1">
+                <mxCell id="57" value="Request secrets&#10;with auth_token" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="56" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="58" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="58" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="690" y="510" as="sourcePoint"/>
                         <mxPoint x="230" y="510" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="59" value="Send secrets" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="58" connectable="0" vertex="1">
+                <mxCell id="59" value="Send secrets" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="58" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="60" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="1" edge="1">
+                <mxCell id="60" value="" style="endArrow=classic;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="80" y="460" as="sourcePoint"/>
                         <mxPoint x="230" y="460" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="61" value="Request secrets" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=default;strokeColor=#FFFFFF;fontColor=default;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;" parent="60" connectable="0" vertex="1">
+                <mxCell id="61" value="Request secrets" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;rounded=1;sketch=1;fontFamily=Courier New;labelBackgroundColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;spacingTop=3;spacing=0;spacingLeft=3;spacingBottom=3;spacingRight=3;fontSize=13;fillColor=#000000;" parent="60" connectable="0" vertex="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>

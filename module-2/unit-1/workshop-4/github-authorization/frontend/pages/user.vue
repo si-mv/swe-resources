@@ -24,8 +24,7 @@ export default {
     data () {
         return {
             user: {},
-            gists: [],
-            gistID: ''
+            gists: []
         }
     },
 

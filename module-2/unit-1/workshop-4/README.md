@@ -36,3 +36,7 @@ Go through the steps to get authorized with Google, and build an app similar to 
 You should follow the instructions for server-side web apps. Since we're learning, **don't** use the client library `googleapis` - you should follow the HTTP/REST instructions. This will help you to understand the flow without obscuring away the details. (We will look at using libraries later.)
 
 Once you've managed to get a basic flow together, go ahead and build an app around Google's API. It can do whatever you want it to do - get creative!
+
+## Extension
+
+Strengthen your security by including a **state** param when you redirect to Google's login page. The OAuth server will include the state param in its response - you should check that it is the same one you sent!
