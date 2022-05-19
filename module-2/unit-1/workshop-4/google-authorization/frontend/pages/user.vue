@@ -1,16 +1,16 @@
 <template>
     <div class="m-5">
         <h1 class="text-2xl font-medium">
-            Files
+            ID Token Payload
         </h1>
-        <button
-            class="my-5 px-4 py-1 text-sm text-blue-600 font-semibold rounded-full border border-blue-200 hover:text-white hover:bg-blue-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
-            @click="getFiles()"
-        >
-            Get files
-        </button>
         <pre>
-{{fileTitles}}
+{{payload}}
+        </pre>
+        <h1 class="text-2xl font-medium">
+            UserInfo Response
+        </h1>
+        <pre>
+{{userInfo}}
         </pre>
     </div>
 </template>
@@ -21,7 +21,7 @@ import axios from 'axios'
 export default {
     data () {
         return {
-            files: []
+            userInfo: {}
         }
     },
 
@@ -29,25 +29,29 @@ export default {
         access_token () {
             return localStorage.getItem('google_access_token')
         },
-
-        fileTitles () {
-            return this.files.map(f => f.title)
+        id_token () {
+            return localStorage.getItem('google_id_token')
+        },
+        payload () {
+            const encodedPayload = this.id_token.split('.')[1]
+            const json = Buffer.from(encodedPayload, 'base64').toString('utf-8')
+            return JSON.parse(json)
         }
     },
 
     methods: {
-        async getFiles () {
-            try {
-                const response = await axios.get(`https://www.googleapis.com/drive/v2/files`, {
-                    headers: {
-                        'Authorization': `Bearer ${this.access_token}`
-                    }
-                })
-                this.files = response.data.items
-            } catch (err) {
-                console.error(err.response.data)
+    },
+
+    async mounted () {
+        const wellknownResponse = await axios.get('https://accounts.google.com/.well-known/openid-configuration')
+        const openIdConfig = wellknownResponse.data
+        const userInfoURL = openIdConfig.userinfo_endpoint
+        const userInfoRes = await axios.get(userInfoURL, {
+            headers: {
+                'Authorization': `Bearer ${this.access_token}`
             }
-        }
+        })
+        this.userInfo = userInfoRes.data
     }
 }
 

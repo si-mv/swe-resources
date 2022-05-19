@@ -17,6 +17,7 @@ app.post('/auth/google', async (req, res) => {
     url += `&redirect_uri=${encodeURIComponent('http://localhost:3000/auth/google/callback')}`
     try {
         const response = await axios.post(url, null)
+        console.log(response.data)
         res.send(response.data)
     } catch (err) {
         console.log(err)

@@ -22,7 +22,7 @@ export default {
             url += `&redirect_uri=${encodeURIComponent('http://localhost:3000/auth/google/callback')}`
             url += `&response_type=code`
             url += `&access_type=offline`
-            url += `&scope=${encodeURIComponent('https://www.googleapis.com/auth/drive.readonly')}`
+            url += `&scope=${encodeURIComponent('openid profile email')}`
             return url
         }
     },
