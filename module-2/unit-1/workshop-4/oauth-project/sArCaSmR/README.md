@@ -64,6 +64,8 @@ Google also provides OpenID Connect (OIDC). We can use this to allow members to 
 - [ ] You will need to make a test user. If you have a gmail account, you could use that, otherwise you will need to make one [here](https://accounts.google.com/signup/v2/webcreateaccount?service=groups2&flowName=GlifWebSignIn&flowEntry=SignUp).
 - [ ] Now you can click credentials and get your client id and client secret. Save these in the .env file of your server.
 
+:+1: Your app is now registered and you're ready to build a hand-made sign in with google button!
+
 ### Implement OAuth2 with Google
 
 - [ ] Just like we did with Github, set up your OAuth flow with Google. The docs for this are [here](https://developers.google.com/identity/protocols/oauth2/web-server#httprest). (N.b. be sure to switch to HTTP/REST mode if not already. We aren't using client libraries so skip this section.)
@@ -72,14 +74,15 @@ Google also provides OpenID Connect (OIDC). We can use this to allow members to 
 - [ ] Build your `auth/google/callback` endpoint in the frontend.
 - [ ] Pass this up to the server and handle the rest of the authorization code flow to get your tokens.
 
-:+1: Your response from Google should contain an access_token (which we could use to access Google's APIs) and also an id_token. We use the id_token to register/authenticate the user.
+:+1: Your response from Google should contain an access_token (which we could use to access Google's APIs) and also an id_token. We use the id_token to authenticate the user, and then log them in.
 
 ### Handle the id_token
 
 - [ ] Get the id_token from the response sent by Google. In order to verify it's authenticity, you can send it to Google's *introspection endpoint* https://oauth2.googleapis.com/tokeninfo?id_token=XYZ123 (Google will check that the jwt is genuine using the secret key that was used to sign the jwt, just like we did using `jwt.verify(token, secret_key)` in the previous workshops. The response from the introspection endpoint will be the *payload* of the jwt.
 - [ ] Once you have the payload, you can add it to a `users` array which mocks sArCaSmR's database. One particularly useful property from the payload is the "sub" - this is the *subject id* and is a unique id for your user shared between you and Google.
+- [ ] Borrow the `login` function from the middleware of Bleeter and use it to "log in" the user to sArCaSmR.
 
-:+1: If you get back a valid id_token, then the user has authenticated!
+:+1: If you successfully validate the id_token, then the user has authenticated! If you generate a sArCaSmR access token, the user has logged in to sArCaSmR! Well done :)
 
 Take a look at your `auth.js` middleware from your project in workshop-1. Google has essentially done the job of the `authenticate` middleware (checking username:password). You can now generate an access token for your user using the `login` middleware we developed last time.
 
@@ -87,7 +90,7 @@ Take a look at your `auth.js` middleware from your project in workshop-1. Google
 
 ### Update the UI
 
-- [ ] Send back the user info to the frontend. Redirect the user away from the callback page and do something in the UI to make it clear the user has logged in (maybe 'Hi, {{firstName!}}') or a nice mdi-person icon.
+- [ ] Send back the user info and sArCaSmR access token to the frontend. If you want to access google resources you can also send back the google access token. Redirect the user away from the callback page and do something in the UI to make it clear the user has logged in (maybe 'Hi, {{firstName!}}') or a nice mdi-person icon.
 
 ## If you get to this point, great!
 
