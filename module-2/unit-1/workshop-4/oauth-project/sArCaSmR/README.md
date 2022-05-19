@@ -91,7 +91,8 @@ Take a look at your `auth.js` middleware from your project in workshop-1. Google
 
 ## If you get to this point, great!
 
-Here are a few options of things you might try:
- - explore Google's vast api and try and build something interesting around it
- - check out Spotify's OAuth api and build something around that
+Here are a few options of things you might try next:
+ - if you feel really interested in the crypto side of things, you can research how to verify the id_token locally (without the introspection endpoint) using the [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) library together with [jwks-rsa](https://github.com/auth0/node-jwks-rsa). Google's `.well-known` url can be found in their OIDC docs.
+ - explore Google's vast api and try and build something interesting around it - you could sArCaSmIfY a google doc or anything else you feel like doing.
+ - check out Spotify's OAuth api and build something around that - maybe sArCaSmR users would like to listen to some music whilst they add some attitude to their gists and docs?
  - have a look at Google's [identity platform](https://developers.google.com/identity/gsi/web) and try to add a sign in with Google button in the "official" way (using Google's libraries and their premade button)
