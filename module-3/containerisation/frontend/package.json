@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o bundle.js",
+    "dev": "watchify index.js -o bundle.js & live-server --port=3000",
+    "start": "browserify index.js -o bundle.js && serve -p 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "live-server": "^1.2.2",
+    "watchify": "^4.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "serve": "^13.0.2"
+  }
+}

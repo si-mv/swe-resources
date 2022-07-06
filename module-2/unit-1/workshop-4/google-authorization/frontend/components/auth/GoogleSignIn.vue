@@ -11,7 +11,7 @@
 export default {
     data () {
         return {
-            client_id: '366497372829-d6j8g55ukp25mml8b4ftpnqu6an21fgn.apps.googleusercontent.com'
+            client_id: '898825302120-s2u249rt83o492a5rvh79klo7hgrhpam.apps.googleusercontent.com'
         }
     },
 
