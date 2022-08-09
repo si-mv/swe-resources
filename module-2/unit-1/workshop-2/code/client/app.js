@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+// A user class to model someone using the app e.g. in browser
 class User {
     constructor (username, password) {
         this.username = username
@@ -35,9 +36,10 @@ class User {
 }
 
 const user1 = new User('nimonian', 'Potato23')
-// To get the token from the terminal, `node` and then
+// To get the basic token from the terminal, `node` and then
 // Buffer.from('nimonian:Potato23', 'utf8').toString('base64')
 
+// The Basic Auth version (username + password)
 const fetchSecret = async (user) => {
     try {
         const reponse = await axios.get(`http://localhost:5000/api/files/${user.username}`, {
@@ -51,8 +53,9 @@ const fetchSecret = async (user) => {
     }
 }
 
-// fetchSecret(user1)
+fetchSecret(user1)
 
+// The JWT version (with JWT accessToken)
 async function fetchUserFiles (user) {
     await user.login()
     try {

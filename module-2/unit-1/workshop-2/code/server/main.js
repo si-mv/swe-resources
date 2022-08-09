@@ -20,7 +20,7 @@ app.use(express.json())
 // Generate secret key in node interactive terminal:
 // require('crypto').randomBytes(64).toString('hex')
 
-
+// DATABASE
 const users = [
     {
         username: 'nimonian',
@@ -47,6 +47,9 @@ const files = [
     }
 ]
 
+// MIDDLEWARES
+// authenticate is used on any end point which is protected by username and password
+// (v1 of api)
 async function authenticate (req, res, next) {
     const user = auth(req)
     const userEntry = users.find(u => u.username === user.name)
@@ -63,6 +66,8 @@ async function authenticate (req, res, next) {
 
 }
 
+// authorize is used on any endpoint which is protected by a jwt auth token
+// (v2 of api)
 async function authorize (req, res, next) {
     const authHeader = req.headers.authorization
     const token = authHeader && authHeader.split(' ')[1]
@@ -75,6 +80,8 @@ async function authorize (req, res, next) {
     })
 }
 
+// API
+// V1: an endpoint protected by basic auth (username + password)
 app.get('/api/files/:username', authenticate, async (req,res) => {
     const user = auth(req)
     const userFiles = files.filter(f => f.owners.includes(user.name))
@@ -84,6 +91,7 @@ app.get('/api/files/:username', authenticate, async (req,res) => {
     })
 })
 
+// V2: an endpoint protected by jwt token
 app.get('/api/v2/files/:username', authorize, (req, res) => {
     if (req.username) {
         const userFiles = files.filter(f => f.owners.includes(req.username))
@@ -96,12 +104,13 @@ app.get('/api/v2/files/:username', authorize, (req, res) => {
     }
 })
 
+// to use V2 endpoint, users must log in with basic auth first
 app.post('/api/login', authenticate, (req, res) => {
     const user = auth(req)
     const accessToken = jwt.sign({ name: user.name, foo: 'bar' }, process.env.ACCESS_TOKEN_SECRET)
     res.send({ accessToken })
 })
 
+// server go brrrrrr
 const PORT = process.env.PORT || 5000
-
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
