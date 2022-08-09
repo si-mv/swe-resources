@@ -39,7 +39,7 @@ const user1 = new User('nimonian', 'Potato23')
 // To get the basic token from the terminal, `node` and then
 // Buffer.from('nimonian:Potato23', 'utf8').toString('base64')
 
-// The Basic Auth version (username + password)
+// The Basic Auth version (v1 with username + password)
 const fetchSecret = async (user) => {
     try {
         const reponse = await axios.get(`http://localhost:5000/api/files/${user.username}`, {
@@ -55,7 +55,7 @@ const fetchSecret = async (user) => {
 
 fetchSecret(user1)
 
-// The JWT version (with JWT accessToken)
+// The JWT version (v2 with JWT accessToken)
 async function fetchUserFiles (user) {
     await user.login()
     try {
